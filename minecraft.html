@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--Añadimos esto para comenzar con la responsividad-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MineShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- EL PANEL DEL CARRITO (Lado Izquierdo) -->
+    <div class="carrito-panel" id="carrito">
+        <h2>🛒 Carrito de Compras</h2>
+        
+        <div id="lista-carrito">
+
+            
+        </div>
+            
+
+        <div class="carrito-total">
+            <p>Total de ítems: <span id="carrito-total-items">0</span></p>
+            <p>Total a pagar: <span id="carrito-total-esmeraldas">0</span> Esmeraldas</p>
+        </div>
+    </div>
+
+
+
+    <!-- El Header y Menú de Navegación -->
+    <header class="barra-navegacion">
+        
+
+        <!-- El botón de las 3 rayitas (Hamburguesa) -->
+        <button class="btn-hamburguesa" onclick="abrirMenu()">☰</button>
+        
+        <!-- Los enlaces del menú -->
+        <nav class="menu-enlaces" id="menu">
+            <a href="home.html">🏠 Inicio</a>
+            <a href="productos.html">⚔️ Productos</a>
+            <a href="nosotros.html">🧪 Nosotros</a>
+            <a href="blog.html">📰 Blog</a>
+            <a href="contacto.html">⚔️ Contacto</a>
+           <!-- <a href="noticias.html">📜 Noticias</a> -->
+            <a href="minedex.html">📖 Mobstiario</a>
+            
+        </nav>
+
+        <!-- Ahora el logo hace clic y abre el carrito -->
+        <div class="logo" onclick="abrirCarrito()" style="cursor: pointer; font-size: 24px; font-weight: bold;">Carrito 🛒</div>
+    </header>
+
+
+    <h1>Tienda de Objetos "MineShop"</h1>
+
+
+    
+    <div>
+        <label for="jugador">Nombre del Jugador:</label>
+        <input type="text" id="jugador" placeholder="Ingresa tu nombre">
+    </div>
+
+    <!-- Catálogo de objetos -->
+    <div class="catalogo">
+
+        <!-- Objeto 1 -->
+        <!-- width="50" Significa 50 píxeles de ancho -->
+        <div class="objeto">
+            <img src="img/Pocion.webp" alt="Poción de Curación" width="50">
+            <h2>Poción de Curación</h2>
+            <p>Precio: 5 Esmeraldas</p>
+            <!--<button onclick="agregarObjeto('pocion', 5)">Agregar</button> <button onclick="Quitar('pocion', 5)">Eliminar</button>-->
+            <button class="btn-agregar" onclick="agregarAlCarrito('Pocion de Curacion', 'img/Pocion.webp', 1)">Agregar al carrito</button>
+            <p>En inventario: <span id="cant-pocion">0</span>/64</p>
+            
+        </div>
+
+        <!-- Objeto 2 -->
+        <div class="objeto">
+            <img src="img/Pan.webp" alt="Pan" width="80">
+            <h2>Pan</h2>
+            <p>Precio: 2 Esmeraldas</p>
+            <!--<button onclick="agregarObjeto('pan', 2)">Agregar</button> <button onclick="Quitar('pan', 2)">Eliminar</button>-->
+            <button class="btn-agregar" onclick="agregarAlCarrito('Pan', 'img/Pan.webp', 1)">Agregar al carrito</button>
+            <p>En inventario: <span id="cant-pan">0</span>/64</p> 
+        </div>
+
+        <!-- Objeto 3 -->
+        <div class="objeto">
+            <img src="img/Diamante.png" alt="Diamante" width="50">
+            <h2>Diamante</h2>
+            <p>Precio: 10 Esmeraldas</p>
+            <!--<button onclick="agregarObjeto('diamante', 10)">Agregar</button> <button onclick="Quitar('diamante', 10)">Eliminar</button>-->
+            <button class="btn-agregar" onclick="agregarAlCarrito('Diamante', 'img/Diamante.png', 1)">Agregar al carrito</button>
+            <p>En inventario: <span id="cant-diamante">0</span>/64</p>
+        </div>
+    </div>
+
+    <!-- Panel de Resumen -->
+    <div class="resumen">
+        <h2>Inventario de: <span id="nombre-resumen">Nadie</span></h2>
+        <p>Total de ítems: <span id="total-items">0</span></p>
+        <p>Costo total: <span id="total-esmeraldas">0</span> esmeraldas</p>
+    </div>
+
+<!-- Esta linea conecta el codigo HTML con el codigo de JavaScript -->
+ <!-- Se coloca al final para que el navegador cargue el diseño visual (imagenes, textos)
+  y deje para el final la logica, asi da la sensacion de que carga mas rapido-->
+    
+    <div class="seccion-animada">
+        <h2>¡Explora el Mundo de Minecraft!</h2>
+        <img src="img/chicken.png" class="imagen-deslizable izquierda" alt="Zombi Minecraft">
+
+        <h2>¡Cuidado con los Monstruos de la Noche!</h2>
+
+        <img src="img/steve.png" class="imagen-deslizable derecha" alt="Esqueleto Minecraft">
+    </div>
+
+    <div class="seccion-noticias">
+        <h2>¡Noticias de la semana en Minecraft!</h2>
+        <p>Mojang acaba de sorprender a toda la comunidad con el anuncio oficial de la versión 1.25, titulada "El Reino de las Sombras", la cual promete cambiar la forma en la que exploramos el mundo.</p>
+
+        <p>>Por primera vez en la historia del juego, se han añadido personajes no jugables (NPCs) con nombres, historias y rutas de movimiento independientes, dejando atrás a los clásicos aldeanos estáticos.</p>
+
+        <p>El primer personaje revelado es "Elowen", una elfa arquera que patrulla los biomas de Bosque Oscuro y que puede defenderte de los monstruos si le ofreces esmeraldas.</p>
+
+        <p>También conoceremos a "Grom", un enano herrero que habita en las profundidades de las nuevas cavernas de magma, buscando minerales extraños para forjar armas.</p>
+
+        <p>Elowen no solo es una guerrera, sino que tiene un inventario rotativo; los jugadores podrán intercambiar con ella semillas mágicas que crecen instantáneamente bajo la luz de la luna.</p>
+
+        <p>Por su parte, Grom tiene la capacidad exclusiva de mejorar tus herramientas de Netherite a un nuevo nivel nunca antes visto, siempre y cuando le lleves el nuevo material del juego.</p>
+
+        <p>Este nuevo material se llama "Aethel", un mineral de color blanco brillante que solo se genera en las islas exteriores del End, debajo de las ciudades del coro.</p>
+
+        <p>Crear una armadura completa de Aethel te otorgará un efecto pasivo y permanente de caída lenta, eliminando por completo el daño por caída mientras la lleves puesta.</p>
+
+        <p>Sin embargo, minar Aethel no será fácil, ya que ha atraído a una nueva criatura hostil: "Los Sombríos", entes de humo negro que se teletransportan a tu espalda cuando dejas de mirarlos.</p>
+
+        <p>Derrotar a los Sombríos es un desafío, pero al hacerlo soltarán un nuevo objeto llamado "Esencia oscura", vital para la alquimia avanzada.</p>
+
+        <p>Si mezclas la Esencia oscura con una poción de visión nocturna, obtendrás la nueva "Poción de Vacío", la cual te vuelve indetectable para los monstruos hostiles incluso si los golpeas.</p>
+
+        <p>La versión 1.25 también introduce a un nuevo jefe: "El Rey de las Profundidades", una colosal criatura marina acorazada que domina los océanos.</p>
+
+        <p>Para invocar a este jefe, los jugadores deberán encontrar una nueva mega-estructura submarina llamada "La Ciudad Hundida", llena de trampas y rompecabezas de agua.</p>
+
+        <p>Al vencer al Rey de las Profundidades, los jugadores serán recompensados con el "Tridente del Abismo", un arma que invoca géiseres que lanzan a los enemigos por los aires.</p>
+
+        <p>Para los amantes de la redstone, se ha añadido el "Cristal de eco puro", un bloque que permite transmitir señales de energía de forma inalámbrica hasta a 50 bloques de distancia.</p>
+
+        <p>La fauna del juego también se expande con la llegada de los "Osos de cristal", unas majestuosas criaturas neutrales que habitan exclusivamente en los picos helados.</p>
+
+        <p>Estos osos pueden ser domesticados utilizando fragmentos de Aethel, y una vez domados, puedes equiparlos con cofres para que funcionen como almacenes móviles en tus expediciones.</p>
+
+        <p>Los aldeanos también han recibido una actualización, incluyendo una nueva profesión: "El Astrólogo", que requiere un bloque de telescopio en su área de trabajo.</p>
+
+        <p>El Astrólogo venderá mapas estelares, un nuevo tipo de objeto que te indica exactamente dónde caerá un meteorito, un nuevo evento dinámico que ocurre rara vez por las noches.</p>
+
+        <p>Sin duda, la versión 1.25 marcará un antes y un después. ¡Prepara tus herramientas y reúne a tus amigos, porque las primeras Snapshots llegarán la próxima semana!</p>
+    </div>
+  
+
+    <div class="seccion-animada2">
+        <h2>¡Compra accesorios para tu mundo!</h2>
+        <img src="img/enderman.png" class="imagen-deslizable izquierda2" alt="Enderman Minecraft">
+
+        <h2>¡Juega con amigos y consigue mascotas!!</h2>
+
+        <img src="img/multijugador.png" class="imagen-deslizable derecha2" alt="Multijugador Minecraft">
+
+        <h2>¿Que esperas?</h2>
+    </div>
+
+
+    <!--Informacion de la pagina web-->
+    <footer>
+        <p>&copy; 2026 MineShop. Todos los derechos reservados.</p>
+        <p>Contactame aqui: contacto@mines shop.com</p>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
