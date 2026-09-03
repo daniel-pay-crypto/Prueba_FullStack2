@@ -1,6 +1,10 @@
 
 /*Codigo de la pagina web principal (MineShop)*/
-
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+}
 /* Cargo la fuente para la tipografia de letras estilo minecraft!*/
 @font-face {
     font-family: 'FuenteMinecraft';
@@ -339,3 +343,125 @@ footer{
 
 /*-------------------------------------------------------------------------------*/
 /*Aca comienza el codigo para la pagina web de Nosotros*/
+
+/* Estilos para el Video Embebido */
+.video-contenedor {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-top: 15px;
+    border: 3px solid #4CAF50;
+    border-radius: 8px;
+}
+
+.video-contenedor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para el Formulario */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.grupo-campo label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4CAF50;
+}
+
+.grupo-campo input, .grupo-campo textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #555;
+    background-color: #222;
+    color: white;
+    font-family: inherit;
+}
+
+.grupo-campo input:focus, .grupo-campo textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.btn-enviar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #3e8e41;
+}
+
+/* Mensajes de Validación JS */
+.error-mensaje {
+    color: #ff4c4c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.mensaje-exito {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/*Para el boton superior volver a mineshop*/
+.btn-volver {
+    display: inline-block;
+    background-color: #222; /* Color de fondo oscuro */
+    color: white;           /* Texto blanco */
+    text-decoration: none;  /* Quita la línea de abajo */
+    padding: 15px 20px;     /* Espacio interno para que parezca botón */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-volver:hover {
+    background-color: #444; /* Se aclara un poco al pasar el mouse */
+}
+/*aca termina para el boton*/
+
+.banner-nosotros {
+    width: 100%;
+    height: 180px; /* Alto del banner (ajústalo a tu gusto) */
+    
+    /* Reemplaza con tu imagen larga de fondo */
+    background-image: url('img/fondonoticias.jpg'); 
+    background-size: cover;       /* Cubre todo el ancho */
+    background-position: center;  /* Centra la imagen */
+    
+    margin-bottom: 20px;
+    border-bottom:4px solid #4CAF50;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;    /* Empuja al aldeano hacia la derecha */
+    align-items: flex-end;        /* Alinea al aldeano abajo por si sobra espacio */
+    
+    margin-bottom: 20px;          /* Separación con el texto de abajo */
+    border-bottom: 4px solid #4CAF50; /* Un borde verde para decorar (opcional) */
+}
+
+.img-aldeano {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 180px; /* Hace que el aldeano mida exactamente los 180px de alto del banner */
+    
+    object-fit: contain; /* Evita que el aldeano se estire o deforme */
+}
