@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - MineShop</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-background-light">
+  <!--Encabezado con navegacion-->
+  <header class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="minecraft.html">⬅ Volver a MineShop</a>
+    </div>
+    <nav class="navbar-menu is-active">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#">🏠 Inicio</a>
+        <a class="navbar-item" href="minedex.html">📖 Mobstiario</a>
+      </div>
+    </nav>
+  </header>
+  <main class="section">
+    <section class="container">
+      <h1 class="title has-text-centered titulo-fluido">¡Contáctanos!</h1>
+      <p class="subtitle has-text-centered">Envianos un mensaje si tienes problemas con tus esmeraldas o pociones.</p>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="box">
+
+            <!--Formulario de contacto-->
+            <form id="form-contacto">
+              <div class="field">
+                <label class="label" for="nombre">Nombre de Jugador</label>
+                <div class="control">
+                  <input class="input" type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej. Steve">
+                </div>
+                <!--Mensaje de error oculto por defecto-->
+                <p class="help is-danger is-hidden" id="error-nombre">El nombre no puede estar vacío.</p>
+              </div>
+              <div class="field">
+                <label class="label" for="email">Correo Electronico</label>
+                <div class="control">
+                  <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="steve@minecraft.com">
+                </div>
+                <p class="help is-danger is-hidden" id="error-email">Ingresa un correo válido que contenga @.</p>
+              </div>
+              <div class="field">
+                <label class="label" for="mensaje">Mensaje</label>
+                <div class="control">
+                  <textarea class="textarea" id="mensaje" name="mensaje" placeholder="Escribe tu duda aquí..."></textarea>
+                </div>
+                <p class="help is-danger is-hidden" id="error-mensaje">Debes escribir un mensaje.</p>
+              </div>
+              <div class="control">
+                <button type="submit" class="button is-success is-fullwidth">Enviar Mensaje</button>
+              </div>
+
+              <!--Mensaje de exito oculto por defecto-->
+              <p class="help is-success is-hidden mt-3" id="mensaje-exito">¡Mensaje enviado con exito! Te responderemos pronto.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--Pie de pagina-->
+  <footer class="footer has-background-dark has-text-white has-text-centered">
+    <p>&copy; 2026 MineShop. Todos los derechos reservados.</p>
+    <p>Contacto: contacto@mineshop.com</p>
+  </footer>
+
+  <script src="contacto.js"></script>
+</body>
+</html>
