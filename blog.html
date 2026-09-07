@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - MineShop</title>
+
+    <!-- Hoja de estilos CSS externa y consistente -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+
+<body>
+
+    <!-- Header para Nosotros -->
+    <header>
+
+        <!-- Barra de navegación para Nosotros -->
+
+        <!-- nav para Nosotros -->
+        <nav class="barra-navegacion">
+
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación">☰</button>
+            
+            <!-- Botones de Sesión a la izquierda -->
+            <div class="botones-sesion">
+                <a href="login.html" class="btn-sesion">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-registro">Registrarse</a>
+            </div>
+
+            <!-- Menú oculto que saldrá desde la derecha -->
+            <div class="menu-enlaces">
+                <a href="minecraft.html">🏠 Inicio</a>
+                <a href="productos.html">⚔️ Productos</a>
+                <a href="nosotros.html">🥖 Nosotros</a>
+                <a href="blog.html">📰 Blog</a>
+                <a href="contacto.html">✉️ Contacto</a>
+                <a href="mobstiario.html">📖 Mobstiario</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    
+    
+    <main class="contenedor-blog">
+    <h1 class="titulo-blog">Noticias y Curiosidades de MineShop</h1>
+    
+    <div class="grid-blogs">
+        
+        <!-- Tarjeta de Blog 1-->
+        <article class="tarjeta-blog">
+            <img src="img/blog1.jpg" alt="Actualización de Minecraft" class="img-blog">
+            <div class="contenido-tarjeta">
+                <h3>¡Llega la nueva actualización 1.21!</h3>
+                <p>Descubre los nuevos bloques, enemigos y herramientas que hemos añadido a nuestro catálogo de MineShop esta semana.</p>
+                <!-- Este botón llevará a la página de detalle -->
+                <a href="detalle-blog1.html" class="btn-leer-mas">Leer artículo completo</a>
+            </div>
+        </article>
+
+        <!--Tarjeta de Blog 2-->
+        <article class="tarjeta-blog">
+            <img src="img/blog2.jpg" alt="Guía de pociones" class="img-blog">
+            <div class="contenido-tarjeta">
+                <h3>Guía Definitiva de Pociones</h3>
+                <p>¿No sabes cómo hacer una poción de caída lenta? En este post te enseñamos los ingredientes secretos y cómo conseguirlos.</p>
+                <!-- Este botón llevará a la segunda página de detalle -->
+                <a href="detalle-blog2.html" class="btn-leer-mas">Leer artículo completo</a>
+            </div>
+        </article>
+
+</main>
+
+<br>
+
+<br>
+        
+    <!-- Footer de Blog -->
+    <footer>
+         <!--Informacion de la pagina web-->
+    
+        <p>&copy; 2026 MineShop. Todos los derechos reservados.</p>
+        <p>Contactame aqui: contacto@mines shop.com</p>
+        <p>
+            <a href="minecraft.html" style="color: #4CAF50;">Ir a la Tienda</a> | 
+            <a href="nosotros.html" style="color: #4CAF50;">Nosotros</a>
+        </p>
+    </footer>
+
+    <!-- Archivo JS para la validación del formulario -->
+    <script src="blog.js"></script>
+</body>
+</html>
