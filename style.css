@@ -337,6 +337,54 @@ footer{
 
 
 /*-------------------------------------------------------------------------------*/
+/*Aca comienza el codigo para la pagina web de Mobstiario*/
+
+
+/*CSS Personalizado y con un Diseño Fluido*/
+
+.titulo-fluido {
+    font-size: clamp(1.8rem, 5vw, 3.5rem) !important;
+    color: #2b1d14 !important;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* clamp() en los nombres de las tarjetas */
+.nombre-mob {
+    font-size: clamp(1.2rem, 3vw, 1.8rem) !important;
+    color: #4CAF50 !important;
+}
+
+/* Efecto hover en las tarjetas para que se vean geniales :)*/
+.tarjeta-mob {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.tarjeta-mob:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Codigo para la responsividad a diferentes pantallas */
+
+/* Responsividad para celulares pequeños (Mobile) */
+@media (max-width: 600px) {
+    .form-container {
+        background-color: #f0f0f0;
+        padding: 15px;
+    }
+    
+    .titulo-fluido {
+        margin-bottom: 15px !important;
+    }
+}
+
+/* 2. Responsividad para Tablets (Pantallas medianas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .form-container {
+        padding: 25px;
+    }
+}
 /*Aca comienza el codigo para la pagina web de Blog*/
 
 /*ESTILOS PARA LA PÁGINA DE BLOGS*/
