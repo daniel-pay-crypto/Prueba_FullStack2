@@ -29,7 +29,7 @@ body {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap; /*Esto permite que los objetos bajen si no hay espacio*/ /*EYEEE*/
+    flex-wrap: wrap; /*Esto permite que los objetos bajen si no hay espacio*/
 }
 
 .objeto {
@@ -72,9 +72,7 @@ footer{
 }
 
 
-/* ==========================
-   CARRITO LATERAL IZQUIERDO
-   ========================== */
+   /*CARRITO LATERAL IZQUIERDO*/
 .carrito-panel {
     position: fixed;
     top: 0;
@@ -153,7 +151,8 @@ footer{
 
 /*Estilos del menu hamburguesa:*/
 .barra-navegacion {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1001;
     display: flex;
     justify-content: space-between; /* Manda el logo a la izquierda y el botón a la derecha */
@@ -385,4 +384,173 @@ footer{
     .form-container {
         padding: 25px;
     }
+}
+/*Aca comienza el codigo para la pagina web de Blog*/
+
+/*ESTILOS PARA LA PÁGINA DE BLOGS*/
+
+
+.contenedor-blog {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo-blog {
+    text-align: center;
+    color: #fff; /* Cambia esto si el fondo de tu web es blanco */
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.grid-blogs {
+    display: grid;
+    /* Esto hace que sea responsivo automáticamente. Las tarjetas medirán al menos 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-blog {
+    background-color: #2a2a2a; /* Fondo gris oscuro, ajústalo a tus colores */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-blog:hover {
+    transform: translateY(-5px); /* Efecto bonito de salto al pasar el mouse */
+}
+
+.img-blog {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+}
+
+.contenido-tarjeta h3 {
+    color: #4CAF50; /* Verde Minecraft */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contenido-tarjeta p {
+    color: #ddd;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-leer-mas {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-leer-mas:hover {
+    background-color: #45a049;
+}
+
+
+
+
+.botones-sesion {
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
+    margin-right: 20px;
+}
+
+.btn-sesion, .btn-registro {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Botón Iniciar Sesión (Transparente con borde verde) */
+.btn-sesion {
+    color: white;
+    background-color: transparent;
+    border: 2px solid #4CAF50;
+}
+
+.btn-sesion:hover {
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+/* Botón Registrarse (Relleno verde) */
+.btn-registro {
+    color: white;
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+}
+
+.btn-registro:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+
+/*Codigo para detalle-blog1*/
+
+.contenedor-detalle-blog {
+    max-width: 800px; /* Más angosto para que sea cómodo de leer */
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.btn-volver {
+    display: inline-block;
+    color: #4CAF50;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    text-decoration: underline;
+}
+
+.titulo-articulo {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.fecha-articulo {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.img-destacada {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.texto-articulo p {
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.texto-articulo h2 {
+    color: #4CAF50;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }

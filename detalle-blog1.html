@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-detalle-1 - MineShop</title>
+
+    <!-- Hoja de estilos CSS externa y consistente -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+
+<body>
+
+    <!-- Header para Blog -->
+    <header>
+
+        <!-- Barra de navegación para Blog -->
+
+        <!-- nav para Blog -->
+        <nav class="barra-navegacion">
+
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación">☰</button>
+            
+            <!-- Botones de Sesión a la izquierda -->
+            <div class="botones-sesion">
+                <a href="login.html" class="btn-sesion">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-registro">Registrarse</a>
+            </div>
+
+            <!-- Menú oculto que saldrá desde la derecha -->
+            <div class="menu-enlaces">
+                <a href="minecraft.html">🏠 Inicio</a>
+                <a href="productos.html">⚔️ Productos</a>
+                <a href="nosotros.html">🥖 Nosotros</a>
+                <a href="blog.html">📰 Blog</a>
+                <a href="contacto.html">✉️ Contacto</a>
+                <a href="mobstiario.html">📖 Mobstiario</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="contenedor-detalle-blog">
+    <!-- Botón para volver atrás -->
+    <a href="blog.html" class="btn-volver">← Volver a Noticias</a>
+
+    <article class="articulo-completo">
+        <h1 class="titulo-articulo">¡Llega la nueva actualización 1.21!</h1>
+        <p class="fecha-articulo">Publicado el 6 de Septiembre, 2026 por Danivaas (Tu desarrollador personal)</p>
+        
+        <img src="img/blog1.jpg" alt="Actualización 1.21" class="img-destacada">
+        
+        <div class="texto-articulo">
+            <p>¡Prepárense mineros! La nueva actualización ya está aquí y trae consigo un montón de sorpresas que cambiarán la forma en la que exploramos las cuevas.</p>
+            
+            <h2>Nuevos Bloques en el Catálogo</h2>
+            <p>Hemos añadido a nuestra tienda todos los nuevos bloques de cobre oxidado y las lámparas de cobre. Son perfectos para darle un toque industrial a tus construcciones.</p>
+            
+            <h2>La nueva arma: El Mazo</h2>
+            <p>Ya puedes reservar el nuevo Mazo en nuestra sección de armería. ¡Ideal para dar golpes críticos cayendo desde las alturas!</p>
+        </div>
+    </article>
+</main>
+
+
+     <!-- Footer de Blog1 -->
+    <footer>
+         <!--Informacion de la pagina web-->
+    
+        <p>&copy; 2026 MineShop. Todos los derechos reservados.</p>
+        <p>Contactame aqui: contacto@mines shop.com</p>
+        <p>
+            <a href="minecraft.html" style="color: #4CAF50;">Ir a la Tienda</a> | 
+            <a href="nosotros.html" style="color: #4CAF50;">Nosotros</a>
+        </p>
+    </footer>
+
+    <!-- Archivo JS para la validación del formulario -->
+    <script src="blog.js"></script>
+</body>
+</html>
