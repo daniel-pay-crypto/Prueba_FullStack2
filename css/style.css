@@ -715,3 +715,14 @@ footer{
     margin: 10px auto 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
+
+
+/* Estilo para los primeros párrafos de la página principal */
+.fondo-oscuro {
+    background-color: rgba(0, 0, 0, 0.7); /* Color negro con 70% de transparencia */
+    padding: 20px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin: 0 auto 30px auto; /* Centra la caja y da espacio abajo */
+    max-width: 900px; /* Evita que el texto se estire por toda la pantalla */
+    text-align: center;
+}
