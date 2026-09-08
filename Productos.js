@@ -3,11 +3,6 @@ const precioBase = {
     "Pocion de Curacion": 5,
     "Pan": 2,
     "Diamante": 10,
-    "Pastel": 6,
-    "Zanahoria": 1,
-    "Trigo": 1,
-    "Zanahoria Dorada": 4,
-    "Sandia": 3
 }
 
 //Aca guardaremos lo que el usuario tiene en el carrito
@@ -159,7 +154,7 @@ function eliminarDelCarrito(itemId) {
 }
 
 
-// Detectamos cada vez que el usuario mueve la rueda para agregar las imagenes desde los lados de forma dinamica y fluida (Zombie en pollo y steve)
+// Detecta cada vez que el usuario mueve la rueda para agregar las imagenes desde los lados de forma dinamica y fluida
 window.addEventListener('scroll', () => {
     // const seccion sirve para detectar la seccion que queremos animar, y las imagenes son las que se van a mover
     const seccion = document.querySelector('.seccion-animada');
