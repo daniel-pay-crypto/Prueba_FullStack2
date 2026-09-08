@@ -11,24 +11,6 @@
 
 <body>
 
-    <!-- EL PANEL DEL CARRITO (Lado Izquierdo) -->
-    <div class="carrito-panel" id="carrito">
-        <h2>🛒 Carrito de Compras</h2>
-        
-        <div id="lista-carrito">
-
-            
-        </div>
-            
-
-        <div class="carrito-total">
-            <p>Total de ítems: <span id="carrito-total-items">0</span></p>
-            <p>Total a pagar: <span id="carrito-total-esmeraldas">0</span> Esmeraldas</p>
-        </div>
-    </div>
-
-
-
     <!-- El Header y Menú de Navegación -->
     <header class="barra-navegacion">
         
@@ -53,57 +35,22 @@
     </header>
 
 
-    <h1>Tienda de Objetos "MineShop"</h1>
+    <h1>Pagina Principal "MineShop"</h1>
 
+    <br>
 
+    <p>¡Te damos la más cálida bienvenida a la tienda oficial de nuestra comunidad de Minecraft!</p>
+    <p>Aquí encontrarás todo lo necesario para elevar tu experiencia de juego al siguiente nivel.</p>
+    <p>Explora nuestro catálogo exclusivo de rangos, cosméticos, paquetes de recursos y beneficios especiales.</p>
+    <p>Cada compra ayuda a mantener nuestros servidores en línea, actualizados y sin lag para todos.</p>
+    <p>¿Buscas destacar en el lobby? Revisa nuestros paquetes VIP con partículas y accesorios únicos.</p>
+    <p>Si prefieres la aventura Survival, tenemos kits de herramientas y protecciones para tus construcciones.</p>
+    <p>Para los fanáticos del PvP, contamos con mejoras estéticas y efectos de batalla espectaculares.</p>
+    <p>Tu apoyo constante nos permite seguir desarrollando modalidades creativas e innovadoras.</p>
+    <p>Asegúrate de ingresar tu nombre de usuario exacto de Minecraft antes de confirmar la compra.</p>
+    <p>Si juegas desde Bedrock Edition, recuerda colocar el prefijo correspondiente si tu cuenta lo requiere.</p>
+    <p>¿Tienes dudas o tuviste algún inconveniente? Nuestro equipo de soporte está siempre disponible.</p>
     
-    <div>
-        <label for="jugador">Nombre del Jugador:</label>
-        <input type="text" id="jugador" placeholder="Ingresa tu nombre">
-    </div>
-
-    <!-- Catálogo de objetos -->
-    <div class="catalogo">
-
-        <!-- Objeto 1 -->
-        <!-- width="50" Significa 50 píxeles de ancho -->
-        <div class="objeto">
-            <img src="img/Pocion.webp" alt="Poción de Curación" width="50">
-            <h2>Poción de Curación</h2>
-            <p>Precio: 5 Esmeraldas</p>
-            <!--<button onclick="agregarObjeto('pocion', 5)">Agregar</button> <button onclick="Quitar('pocion', 5)">Eliminar</button>-->
-            <button class="btn-agregar" onclick="agregarAlCarrito('Pocion de Curacion', 'img/Pocion.webp', 1)">Agregar al carrito</button>
-            <p>En inventario: <span id="cant-pocion">0</span>/64</p>
-            
-        </div>
-
-        <!-- Objeto 2 -->
-        <div class="objeto">
-            <img src="img/Pan.webp" alt="Pan" width="80">
-            <h2>Pan</h2>
-            <p>Precio: 2 Esmeraldas</p>
-            <!--<button onclick="agregarObjeto('pan', 2)">Agregar</button> <button onclick="Quitar('pan', 2)">Eliminar</button>-->
-            <button class="btn-agregar" onclick="agregarAlCarrito('Pan', 'img/Pan.webp', 1)">Agregar al carrito</button>
-            <p>En inventario: <span id="cant-pan">0</span>/64</p> 
-        </div>
-
-        <!-- Objeto 3 -->
-        <div class="objeto">
-            <img src="img/Diamante.png" alt="Diamante" width="50">
-            <h2>Diamante</h2>
-            <p>Precio: 10 Esmeraldas</p>
-            <!--<button onclick="agregarObjeto('diamante', 10)">Agregar</button> <button onclick="Quitar('diamante', 10)">Eliminar</button>-->
-            <button class="btn-agregar" onclick="agregarAlCarrito('Diamante', 'img/Diamante.png', 1)">Agregar al carrito</button>
-            <p>En inventario: <span id="cant-diamante">0</span>/64</p>
-        </div>
-    </div>
-
-    <!-- Panel de Resumen -->
-    <div class="resumen">
-        <h2>Inventario de: <span id="nombre-resumen">Nadie</span></h2>
-        <p>Total de ítems: <span id="total-items">0</span></p>
-        <p>Costo total: <span id="total-esmeraldas">0</span> esmeraldas</p>
-    </div>
 
 <!-- Esta linea conecta el codigo HTML con el codigo de JavaScript -->
  <!-- Se coloca al final para que el navegador cargue el diseño visual (imagenes, textos)
