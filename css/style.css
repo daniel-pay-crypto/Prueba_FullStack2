@@ -702,3 +702,16 @@ footer{
     margin-top: 30px;
     margin-bottom: 15px;
 }
+
+/* Estilos añadidos para la página de Productos */
+
+.objeto img {
+    height: 50px;
+    object-fit: contain;
+}
+
+.subtitulo-productos {
+    max-width: 600px;
+    margin: 10px auto 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}

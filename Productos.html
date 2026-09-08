@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--Anadimos esto para comenzar con la responsividad-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos - MineShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- EL PANEL DEL CARRITO (Lado Izquierdo) -->
+    <div class="carrito-panel" id="carrito">
+        <h2>🛒 Carrito de Compras</h2>
+
+        <div id="lista-carrito">
+
+
+        </div>
+
+
+        <div class="carrito-total">
+            <p>Total de items: <span id="carrito-total-items">0</span></p>
+            <p>Total a pagar: <span id="carrito-total-esmeraldas">0</span> Esmeraldas</p>
+        </div>
+    </div>
+
+
+
+    <!-- El Header y Menu de Navegacion -->
+    <header class="barra-navegacion">
+
+
+        <!-- El boton de las 3 rayitas (Hamburguesa) -->
+        <button class="btn-hamburguesa" onclick="abrirMenu()">☰</button>
+
+        <!-- Los enlaces del menu -->
+        <nav class="menu-enlaces" id="menu">
+            <a href="minecraft.html">🏠 Inicio</a>
+            <a href="productos.html">⚔️ Productos</a>
+            <a href="nosotros.html">🧪 Nosotros</a>
+            <a href="blog.html">📰 Blog</a>
+            <a href="contacto.html">⚔️ Contacto</a>
+            <a href="minedex.html">📖 Mobstiario</a>
+
+        </nav>
+
+        <!-- Ahora el logo hace clic y abre el carrito -->
+        <div class="logo" onclick="abrirCarrito()" style="cursor: pointer; font-size: 24px; font-weight: bold;">Carrito 🛒</div>
+    </header>
+
+
+    <h1>Catalogo de Productos "MineShop"</h1>
+    <p class="subtitulo-productos">Todo lo que necesitas para sobrevivir tu próxima aventura.</p>
+
+    <!-- Catalogo completo de objetos -->
+    <div class="catalogo">
+
+        <!-- Objeto 1 -->
+        <div class="objeto">
+            <img src="img/Pocion.webp" alt="Pocion de Curacion" width="50">
+            <h2>Pocion de Curacion</h2>
+            <p>Precio: 5 Esmeraldas</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Pocion de Curacion', 'img/Pocion.webp', 1)">Agregar al carrito</button>
+        </div>
+
+        <!-- Objeto 2 -->
+        <div class="objeto">
+            <img src="img/Pan.webp" alt="Pan" width="50">
+            <h2>Pan</h2>
+            <p>Precio: 2 Esmeraldas</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Pan', 'img/Pan.webp', 1)">Agregar al carrito</button>
+        </div>
+
+        <!-- Objeto 3 -->
+        <div class="objeto">
+            <img src="img/Diamante.png" alt="Diamante" width="50">
+            <h2>Diamante</h2>
+            <p>Precio: 10 Esmeraldas</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Diamante', 'img/Diamante.png', 1)">Agregar al carrito</button>
+        </div>
+
+
+    </div>
+
+    <!--Informacion de la pagina web-->
+    <footer>
+        <p>&copy; 2026 MineShop. Todos los derechos reservados.</p>
+        <p>Contacto: contacto@mineshop.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
