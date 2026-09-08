@@ -2,7 +2,8 @@
 const formContacto = document.getElementById('form-contacto');
 formContacto.addEventListener('submit', (e) => {
 
-
+    e.preventDefault(); //Evita que se recargue la página al enviar el formulario
+    
     // Obtenemos lo escrito y le quitamos los espacios en blanco a los lados con el .trim()
     const nombre = document.getElementById('nombre').value.trim();
     const email = document.getElementById('email').value.trim();

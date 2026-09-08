@@ -7,16 +7,31 @@
     <!--Framework CDN: Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <!--CSS Personalizado -->
-    <link rel="stylesheet" href="minedex.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="has-background-light">
 
-    <!-- Navegación para volver a la tienda -->
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="minecraft.html">⬅ Volver a MineShop</a>
-        </div>
-    </nav>
+    <nav class="barra-navegacion">
+
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" onclick="abrirMenu()">☰</button>
+            
+            <!-- Botones de Sesión a la izquierda -->
+            <div class="botones-sesion">
+                <a href="login.html" class="btn-sesion">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-registro">Registrarse</a>
+            </div>
+
+            <!-- Menú oculto que saldrá desde la derecha -->
+            <div class="menu-enlaces" id="menu">
+                <a href="minecraft.html">🏠 Inicio</a>
+                <a href="productos.html">⚔️ Productos</a>
+                <a href="nosotros.html">🥖 Nosotros</a>
+                <a href="blog.html">📰 Blog</a>
+                <a href="contacto.html">✉️ Contacto</a>
+                <a href="mobstiario.html">📖 Mobstiario</a>
+            </div>
+
+      </nav>
 
     <section class="section">
         <div class="container">
@@ -82,8 +97,14 @@
         </div>
     </section>
 
-    
-    <script src="minedex.js"></script>
+    <!--Pie de pagina-->
+  <footer class="footer has-background-dark has-text-white has-text-centered">
+    <p>&copy; 2026 MineShop. Todos los derechos reservados.</p>
+    <p>Contacto: contacto@mineshop.com</p>
+  </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/minedex.js"></script>
     
 </body>
 </html>

@@ -5,14 +5,18 @@ const buscador = document.getElementById('buscador');
 
 // Función para crear tarjetas
 function agregarTarjeta(nombre, origen, rol, imagen) {
+
     // Creamos la columna contenedora de Bulma
     const divColumna = document.createElement('div');
+
     divColumna.className = 'column is-half-desktop is-half-tablet is-full-mobile tarjeta-contenedor';
 
 // Creamos la tarjeta con Bulma y la información del mob
     divColumna.innerHTML = `
-        <div class="card tarjeta-mob">
+        <div class="card tarjeta-mob has-background-white">
+
             <!-- Forzamos que la caja de la imagen siempre mida 200px de alto -->
+
             <div class="card-image has-text-centered has-background-white" style="height: 200px; display: flex; justify-content: center; align-items: center; padding: 10px;">
                 <figure class="image" style="width: 100%; height: 100%;">
                     <!-- object-fit: contain hace que la imagen no se estire ni se aplaste -->
@@ -24,10 +28,10 @@ function agregarTarjeta(nombre, origen, rol, imagen) {
                 <p class="subtitle is-6"><strong>Origen:</strong> ${origen}</p>
                 <span class="tag is-info is-medium">${rol}</span>
             </div>
-            <footer class="card-footer">
-                <!-- Botón de Eliminar [D]ELETE -->
+            <div class="card-footer has-background-success">
+                <!-- Botón de Eliminar DELETE -->
                 <a href="#" class="card-footer-item has-text-danger btn-eliminar">🗑️ Eliminar</a>
-            </footer>
+            </div>
         </div>
     `;
 

@@ -8,7 +8,7 @@ header {
 /* Cargo la fuente para la tipografia de letras estilo minecraft!*/
 @font-face {
     font-family: 'FuenteMinecraft';
-    src: url('Minecraft.ttf') format('truetype');
+    src: url('../Minecraft.ttf') format('truetype');
 }
 
 /*Le aplico la tipografia de minecraft a toda la página web de MineShop*/    
@@ -17,7 +17,7 @@ body {
     color: white;
     text-align: center;
     /*Aca agrego una imagen de fondo para mi pagina web*/
-    background-image: url('img/TierraMinecraft.jpg');
+    background-image: url('../img/TierraMinecraft.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ body {
 
 footer{
     /*Importo la imagen desde la carpeta img*/
-    background-image: url('img/Fondosteve.jpg');
+    background-image: url('../img/Fondosteve.jpg');
     /*Para que la imagen cubra todo el footer*/
     background-size: cover;/*Esto es para que la imagen cubra todo el ancho de la pantalla*/
     background-position: center;
@@ -461,7 +461,7 @@ footer{
     height: 180px; /* Alto del banner*/
     
 
-    background-image: url('img/fondonoticias.jpg'); 
+    background-image: url('../img/fondonoticias.jpg'); 
     background-size: cover;       /* Cubre todo el ancho */
     background-position: center;  /* Centra la imagen */
     

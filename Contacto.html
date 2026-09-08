@@ -5,31 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - MineShop</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
+
+
 <body class="has-background-light">
-  <!--Encabezado con navegacion-->
-  <header class="navbar is-dark" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="minecraft.html">⬅ Volver a MineShop</a>
-    </div>
-    <nav class="navbar-menu is-active">
-      <div class="navbar-start">
-        <a class="navbar-item" href="#">🏠 Inicio</a>
-        <a class="navbar-item" href="minedex.html">📖 Mobstiario</a>
-      </div>
-    </nav>
+  <!-- Header General -->
+    <header>
+        <nav class="barra-navegacion">
+
+            <button class="btn-hamburguesa" aria-label="Abrir menú de navegación" onclick="abrirMenu()">☰</button>
+            
+            <!-- Botones de Sesión a la izquierda -->
+            <div class="botones-sesion">
+                <a href="login.html" class="btn-sesion">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-registro">Registrarse</a>
+            </div>
+
+            <!-- Menú oculto que saldrá desde la derecha -->
+            <div class="menu-enlaces" id="menu">
+                <a href="minecraft.html">🏠 Inicio</a>
+                <a href="productos.html">⚔️ Productos</a>
+                <a href="nosotros.html">🥖 Nosotros</a>
+                <a href="blog.html">📰 Blog</a>
+                <a href="contacto.html">✉️ Contacto</a>
+                <a href="mobstiario.html">📖 Mobstiario</a>
+            </div>
+
+      </nav>
   </header>
+
+
   <main class="section">
+
     <section class="container">
-      <h1 class="title has-text-centered titulo-fluido">¡Contáctanos!</h1>
-      <p class="subtitle has-text-centered">Envianos un mensaje si tienes problemas con tus esmeraldas o pociones.</p>
+      <h1 class="title has-text-centered titulo-fluido has-text-black">¡Contáctanos!</h1>
+      <p class="subtitle has-text-centered has-text-white">¡Envianos un mensaje si tienes problemas con tus esmeraldas o pociones!.</p>
       <div class="columns is-centered">
         <div class="column is-half">
           <div class="box">
 
             <!--Formulario de contacto-->
             <form id="form-contacto">
+
               <div class="field">
                 <label class="label" for="nombre">Nombre de Jugador</label>
                 <div class="control">
@@ -38,6 +57,8 @@
                 <!--Mensaje de error oculto por defecto-->
                 <p class="help is-danger is-hidden" id="error-nombre">El nombre no puede estar vacío.</p>
               </div>
+
+
               <div class="field">
                 <label class="label" for="email">Correo Electronico</label>
                 <div class="control">
@@ -45,6 +66,8 @@
                 </div>
                 <p class="help is-danger is-hidden" id="error-email">Ingresa un correo válido que contenga @.</p>
               </div>
+
+
               <div class="field">
                 <label class="label" for="mensaje">Mensaje</label>
                 <div class="control">
@@ -64,12 +87,14 @@
       </div>
     </section>
   </main>
+
   <!--Pie de pagina-->
   <footer class="footer has-background-dark has-text-white has-text-centered">
     <p>&copy; 2026 MineShop. Todos los derechos reservados.</p>
     <p>Contacto: contacto@mineshop.com</p>
   </footer>
 
-  <script src="contacto.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/contacto.js"></script>
 </body>
 </html>
