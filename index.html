@@ -2,42 +2,151 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!--Añadimos esto para comenzar con la responsividad-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jetea6</title>
-    <link rel="stylesheet" href="/estilos/estail.css">
+    
+    <title>MineShop</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header id="header"></header>
-    <div>
-        <section id="inicio">
-            <h2>
-                Si no nos dan 20 millones, el fabri regalará el JETEA 6 con el hytale
-            </h2>
-            <img src="https://gamersrd.com/wp-content/uploads/2026/08/Cyberleek-amenaza-a-Rockstar-con-lanzar-la-build-de-GTA-VI-1024x576.jpg" alt="">
-        </section>
-        <section id="info">
-            <h2>
-                Información del jakeo
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odit laboriosam, ut possimus nemo saepe aperiam, molestiae soluta quasi minima maxime qui quidem earum repudiandae neque unde ea, praesentium beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet molestias vel modi alias neque aspernatur harum, animi commodi dolores qui ipsum nisi nesciunt consectetur odio in. Iusto nemo quia illum.
-            </p>
-        </section>
-        <section id="contacto">
-            <article>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrgnBaW-CdgJpYGnsiZpoE7_fqFj3HuVs-6laKaMtBIFPWlwa6hsgdbSg&s=10" alt="">
-            </article>
-            <article>
-                <h2>Contacto</h2>
-                <a href="mailto:fa.canova@duocuc.cl">Mandar por correo los millones</a>
-                <a href="tel:+56912341234">Llama para mandar los millones</a>
-                <a href="https://www.instagram.com/ha.rold_morales/" target="_blank">
-                    <img src="https://wallpapers.com/images/hd/instagram-logo-vector-icon-yykh2ngccgf706ay.png" alt="">
-                </a>
-            </article>
-        </section>
+
+    <!-- El Header y Menú de Navegación -->
+    <header class="barra-navegacion">
+        
+
+        <!-- El botón de las 3 rayitas (Hamburguesa) -->
+        <button class="btn-hamburguesa" onclick="abrirMenu()">☰</button>
+        
+        <!-- Los enlaces del menú -->
+        <nav class="menu-enlaces" id="menu">
+            <a href="home.html">🏠 Inicio</a>
+            <a href="productos.html">⚔️ Productos</a>
+            <a href="nosotros.html">🧪 Nosotros</a>
+            <a href="blog.html">📰 Blog</a>
+            <a href="contacto.html">⚔️ Contacto</a>
+           <!-- <a href="noticias.html">📜 Noticias</a> -->
+            <a href="mobstiario.html">📖 Mobstiario</a>
+            
+        </nav>
+
+         <!-- Botones de Sesión  -->
+            <div class="botones-sesion">
+                <a href="login.html" class="btn-sesion">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-registro">Registrarse</a>
+            </div>
+
+    </header>
+
+
+    <h1>MineShop</h1>
+
+    <br>
+
+    <div class="fondo-oscuro">
+    <p>¡BIENVENIDO A LA TIENDA OFICIAL DE NUESTRA COMUNIDAD DE MINECRAFT!</p>
+
+    <br>
+
+    <p>Aquí encontrarás todo lo necesario para elevar tu experiencia de juego al siguiente nivel.</p>
+    
+    <p>Explora nuestro catálogo exclusivo de rangos, cosméticos, paquetes de recursos y beneficios especiales.</p>
+   
+    <p>Cada compra ayuda a mantener nuestros servidores en línea, actualizados y sin lag para todos.</p>
+    
+    <p>¿Buscas destacar en el lobby? Revisa nuestros paquetes VIP con partículas y accesorios únicos.</p>
+    
+    <p>Si prefieres la aventura Survival, tenemos kits de herramientas y protecciones para tus construcciones.</p>
+    
+    <p>Para los fanáticos del PvP, contamos con mejoras estéticas y efectos de batalla espectaculares.</p>
+    
+    <p>Tu apoyo constante nos permite seguir desarrollando modalidades creativas e innovadoras.</p>
+    
+    <p>Asegúrate de ingresar tu nombre de usuario exacto de Minecraft antes de confirmar la compra.</p>
+    
+    <p>Si juegas desde Bedrock Edition, recuerda colocar el prefijo correspondiente si tu cuenta lo requiere.</p>
+    
+    <p>¿Tienes dudas o tuviste algún inconveniente? Nuestro equipo de soporte está siempre disponible.</p>
     </div>
-    <footer id="footer"></footer>
+
+<!-- Esta linea conecta el codigo HTML con el codigo de JavaScript -->
+ <!-- Se coloca al final para que el navegador cargue el diseño visual (imagenes, textos)
+  y deje para el final la logica, asi da la sensacion de que carga mas rapido-->
+    
+    <div class="seccion-animada">
+        <h2>¡Explora el Mundo de Minecraft!</h2>
+        <img src="img/chicken.png" class="imagen-deslizable izquierda" alt="Zombi Minecraft">
+
+        <h2>¡Cuidado con los Monstruos de la Noche!</h2>
+
+        <img src="img/steve.png" class="imagen-deslizable derecha" alt="Esqueleto Minecraft">
+    </div>
+
+    <div class="seccion-noticias">
+        <h2>¡Noticias de la semana en Minecraft!</h2>
+        <p>Mojang acaba de sorprender a toda la comunidad con el anuncio oficial de la versión 1.25, titulada "El Reino de las Sombras", la cual promete cambiar la forma en la que exploramos el mundo.</p>
+
+        <p>>Por primera vez en la historia del juego, se han añadido personajes no jugables (NPCs) con nombres, historias y rutas de movimiento independientes, dejando atrás a los clásicos aldeanos estáticos.</p>
+
+        <p>El primer personaje revelado es "Elowen", una elfa arquera que patrulla los biomas de Bosque Oscuro y que puede defenderte de los monstruos si le ofreces esmeraldas.</p>
+
+        <p>También conoceremos a "Grom", un enano herrero que habita en las profundidades de las nuevas cavernas de magma, buscando minerales extraños para forjar armas.</p>
+
+        <p>Elowen no solo es una guerrera, sino que tiene un inventario rotativo; los jugadores podrán intercambiar con ella semillas mágicas que crecen instantáneamente bajo la luz de la luna.</p>
+
+        <p>Por su parte, Grom tiene la capacidad exclusiva de mejorar tus herramientas de Netherite a un nuevo nivel nunca antes visto, siempre y cuando le lleves el nuevo material del juego.</p>
+
+        <p>Este nuevo material se llama "Aethel", un mineral de color blanco brillante que solo se genera en las islas exteriores del End, debajo de las ciudades del coro.</p>
+
+        <p>Crear una armadura completa de Aethel te otorgará un efecto pasivo y permanente de caída lenta, eliminando por completo el daño por caída mientras la lleves puesta.</p>
+
+        <p>Sin embargo, minar Aethel no será fácil, ya que ha atraído a una nueva criatura hostil: "Los Sombríos", entes de humo negro que se teletransportan a tu espalda cuando dejas de mirarlos.</p>
+
+        <p>Derrotar a los Sombríos es un desafío, pero al hacerlo soltarán un nuevo objeto llamado "Esencia oscura", vital para la alquimia avanzada.</p>
+
+        <p>Si mezclas la Esencia oscura con una poción de visión nocturna, obtendrás la nueva "Poción de Vacío", la cual te vuelve indetectable para los monstruos hostiles incluso si los golpeas.</p>
+
+        <p>La versión 1.25 también introduce a un nuevo jefe: "El Rey de las Profundidades", una colosal criatura marina acorazada que domina los océanos.</p>
+
+        <p>Para invocar a este jefe, los jugadores deberán encontrar una nueva mega-estructura submarina llamada "La Ciudad Hundida", llena de trampas y rompecabezas de agua.</p>
+
+        <p>Al vencer al Rey de las Profundidades, los jugadores serán recompensados con el "Tridente del Abismo", un arma que invoca géiseres que lanzan a los enemigos por los aires.</p>
+
+        <p>Para los amantes de la redstone, se ha añadido el "Cristal de eco puro", un bloque que permite transmitir señales de energía de forma inalámbrica hasta a 50 bloques de distancia.</p>
+
+        <p>La fauna del juego también se expande con la llegada de los "Osos de cristal", unas majestuosas criaturas neutrales que habitan exclusivamente en los picos helados.</p>
+
+        <p>Estos osos pueden ser domesticados utilizando fragmentos de Aethel, y una vez domados, puedes equiparlos con cofres para que funcionen como almacenes móviles en tus expediciones.</p>
+
+        <p>Los aldeanos también han recibido una actualización, incluyendo una nueva profesión: "El Astrólogo", que requiere un bloque de telescopio en su área de trabajo.</p>
+
+        <p>El Astrólogo venderá mapas estelares, un nuevo tipo de objeto que te indica exactamente dónde caerá un meteorito, un nuevo evento dinámico que ocurre rara vez por las noches.</p>
+
+        <p>Sin duda, la versión 1.25 marcará un antes y un después. ¡Prepara tus herramientas y reúne a tus amigos, porque las primeras Snapshots llegarán la próxima semana!</p>
+    </div>
+  
+
+    <div class="seccion-animada2">
+        <h2>¡Compra accesorios para tu mundo!</h2>
+        <img src="img/enderman.png" class="imagen-deslizable izquierda2" alt="Enderman Minecraft">
+
+        <h2>¡Juega con amigos y consigue mascotas!!</h2>
+
+        <img src="img/multijugador.png" class="imagen-deslizable derecha2" alt="Multijugador Minecraft">
+
+        <h2>¿Que esperas?</h2>
+    </div>
+
+
+    <!--Informacion de la pagina web-->
+    <footer>
+        <p>&copy; 2026 MineShop. Todos los derechos reservados.</p>
+        <p>Contactame aqui: contacto@mines shop.com</p>
+
+    </footer>
+    <script src="js/script.js"></script>
+
 </body>
-<script src="/escripts/ecri.js"></script>
 </html>
+
+<!--olas-->>
