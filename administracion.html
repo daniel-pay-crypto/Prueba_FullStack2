@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración - MineShop</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-background-light">
+
+  <div class="columns is-gapless" style="min-height: 100vh;">
+
+    <!--menu lateral-->
+    <aside class="column is-2 has-background-dark p-4">
+      <p class="title is-5 has-text-white mb-5">⛏ MineShop Admin</p>
+
+      <aside class="menu">
+        <p class="menu-label has-text-grey-light">General</p>
+        <ul class="menu-list">
+          <li><a class="has-text-white" href="minecraft.html">⬅ Volver a la tienda</a></li>
+        </ul>
+
+        <p class="menu-label has-text-grey-light">Gestión</p>
+        <ul class="menu-list">
+          <!--Estos botones muestran e ocultan las secciones de abajo-->
+          <li><a class="has-text-white" id="link-productos" onclick="mostrarSeccion('productos')">📦 Productos</a></li>
+          <li><a class="has-text-white" id="link-usuarios" onclick="mostrarSeccion('usuarios')">👤 Usuarios</a></li>
+        </ul>
+      </aside>
+    </aside>
+
+    <main class="column p-6">
+
+      <!-- ---------- SECCIÓN PRODUCTOS ---------- -->
+      <section id="seccion-productos">
+        <h1 class="title">Productos</h1>
+
+        <button class="button is-success mb-4" onclick="mostrarFormularioProducto()">+ Nuevo producto</button>
+
+        <!-- Tabla con los productos existentes -->
+        <table class="table is-fullwidth is-striped is-hoverable">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Categoría</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-productos">
+            <!-- Las filas se generan con JavaScript, ver admin.js -->
+          </tbody>
+        </table>
+
+        <!-- Formulario para agregar un producto (oculto por defecto) -->
+        <div class="box is-hidden" id="form-box-producto">
+          <h2 class="subtitle">Nuevo producto</h2>
+          <form id="form-producto">
+
+            <div class="field">
+              <label class="label">Código del producto</label>
+              <div class="control">
+                <input class="input" type="text" id="p-codigo" placeholder="Ej. POC-001">
+              </div>
+              <p class="help is-danger is-hidden" id="error-p-codigo">El código es requerido y debe tener al menos 3 caracteres.</p>
+            </div>
+
+            <div class="field">
+              <label class="label">Nombre</label>
+              <div class="control">
+                <input class="input" type="text" id="p-nombre" placeholder="Ej. Poción de Curación">
+              </div>
+              <p class="help is-danger is-hidden" id="error-p-nombre">El nombre es requerido (máx. 100 caracteres).</p>
+            </div>
+
+            <div class="field">
+              <label class="label">Descripción (opcional)</label>
+              <div class="control">
+                <textarea class="textarea" id="p-descripcion" placeholder="Describe el producto..."></textarea>
+              </div>
+              <p class="help is-danger is-hidden" id="error-p-descripcion">La descripción no puede superar los 500 caracteres.</p>
+            </div>
+
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Precio</label>
+                  <div class="control">
+                    <input class="input" type="number" id="p-precio" min="0" step="0.01" placeholder="0">
+                  </div>
+                  <p class="help is-danger is-hidden" id="error-p-precio">El precio es requerido y no puede ser negativo.</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <label class="label">Stock</label>
+                  <div class="control">
+                    <input class="input" type="number" id="p-stock" min="0" step="1" placeholder="0">
+                  </div>
+                  <p class="help is-danger is-hidden" id="error-p-stock">El stock es requerido, debe ser 0 o más, y un número entero.</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <label class="label">Stock crítico (opcional)</label>
+                  <div class="control">
+                    <input class="input" type="number" id="p-stock-critico" min="0" step="1" placeholder="0">
+                  </div>
+                  <p class="help is-danger is-hidden" id="error-p-stock-critico">Debe ser un número entero de 0 o más.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Categoría</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="p-categoria">
+                    <option value="">-- Selecciona una categoría --</option>
+                    <option value="Pociones">Pociones</option>
+                    <option value="Comida">Comida</option>
+                    <option value="Recursos">Recursos</option>
+                    <option value="Armas">Armas</option>
+                  </select>
+                </div>
+              </div>
+              <p class="help is-danger is-hidden" id="error-p-categoria">Debes seleccionar una categoría.</p>
+            </div>
+
+            <div class="field">
+              <label class="label">Imagen (opcional, pega una URL)</label>
+              <div class="control">
+                <input class="input" type="text" id="p-imagen" placeholder="https://...">
+              </div>
+            </div>
+
+            <div class="field is-grouped mt-4">
+              <div class="control">
+                <button type="submit" class="button is-success">Guardar producto</button>
+              </div>
+              <div class="control">
+                <button type="button" class="button is-light" onclick="ocultarFormularioProducto()">Cancelar</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+      <!--SECCION USUARIOS-->
+      <section id="seccion-usuarios" class="is-hidden">
+        <h1 class="title">Usuarios</h1>
+
+        <button class="button is-success mb-4" onclick="mostrarFormularioUsuario()">+ Nuevo usuario</button>
+
+        <table class="table is-fullwidth is-striped is-hoverable">
+          <thead>
+            <tr>
+              <th>RUN</th>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Correo</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-usuarios">
+          </tbody>
+        </table>
+
+        <div class="box is-hidden" id="form-box-usuario">
+          <h2 class="subtitle">Nuevo usuario</h2>
+          <form id="form-usuario">
+
+            <div class="field">
+              <label class="label">RUN (sin puntos ni guión, ej: 19011022K)</label>
+              <div class="control">
+                <input class="input" type="text" id="u-run" placeholder="19011022K">
+              </div>
+              <p class="help is-danger is-hidden" id="error-u-run">El RUN es requerido, sin puntos ni guión, entre 7 y 9 caracteres.</p>
+            </div>
+
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Nombre</label>
+                  <div class="control">
+                    <input class="input" type="text" id="u-nombre" placeholder="Steve">
+                  </div>
+                  <p class="help is-danger is-hidden" id="error-u-nombre">El nombre es requerido (máx. 50 caracteres).</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <label class="label">Apellidos</label>
+                  <div class="control">
+                    <input class="input" type="text" id="u-apellidos" placeholder="Minecraft">
+                  </div>
+                  <p class="help is-danger is-hidden" id="error-u-apellidos">Los apellidos son requeridos (máx. 100 caracteres).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Correo</label>
+              <div class="control">
+                <input class="input" type="email" id="u-correo" placeholder="steve@duoc.cl">
+              </div>
+              <p class="help is-danger is-hidden" id="error-u-correo">Correo requerido. Solo se aceptan @duoc.cl, @profesor.duoc.cl o @gmail.com.</p>
+            </div>
+
+            <div class="field">
+              <label class="label">Tipo de usuario</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="u-tipo">
+                    <option value="">-- Selecciona un tipo --</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Vendedor">Vendedor</option>
+                    <option value="Cliente">Cliente</option>
+                  </select>
+                </div>
+              </div>
+              <p class="help is-danger is-hidden" id="error-u-tipo">Debes seleccionar un tipo de usuario.</p>
+            </div>
+
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Región</label>
+                  <div class="control">
+                    <div class="select is-fullwidth">
+                      <!--Al cambiar la region, actualizamos las comunas con JS-->
+                      <select id="u-region" onchange="actualizarComunas()">
+                        <option value="">-- Selecciona una región --</option>
+                        <option value="Metropolitana">Región Metropolitana de Santiago</option>
+                        <option value="Araucania">Región de la Araucanía</option>
+                        <option value="Nuble">Región de Ñuble</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p class="help is-danger is-hidden" id="error-u-region">Debes seleccionar una región.</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <label class="label">Comuna</label>
+                  <div class="control">
+                    <div class="select is-fullwidth">
+                      <select id="u-comuna">
+                        <option value="">-- Primero selecciona una región --</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p class="help is-danger is-hidden" id="error-u-comuna">Debes seleccionar una comuna.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Dirección</label>
+              <div class="control">
+                <input class="input" type="text" id="u-direccion" placeholder="Calle Falsa 123">
+              </div>
+              <p class="help is-danger is-hidden" id="error-u-direccion">La dirección es requerida (máx. 300 caracteres).</p>
+            </div>
+
+            <div class="field is-grouped mt-4">
+              <div class="control">
+                <button type="submit" class="button is-success">Guardar usuario</button>
+              </div>
+              <div class="control">
+                <button type="button" class="button is-light" onclick="ocultarFormularioUsuario()">Cancelar</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
